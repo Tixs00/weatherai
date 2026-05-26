@@ -1,0 +1,207 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 50%, #f5e6ff 100%);
+  --background-solid: #f0f4ff;
+  --foreground: #0f1729;
+  --card: #ffffff;
+  --card-foreground: #0f1729;
+  --popover: #ffffff;
+  --popover-foreground: #0f1729;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --secondary: #06b6d4;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #c7d2e0;
+  --input: #f8fafc;
+  --ring: #4f46e5;
+  --chart-1: #4f46e5;
+  --chart-2: #06b6d4;
+  --chart-3: #8b5cf6;
+  --chart-4: #ec4899;
+  --chart-5: #f59e0b;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f1729;
+  --sidebar-primary: #4f46e5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #06b6d4;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #c7d2e0;
+  --sidebar-ring: #4f46e5;
+}
+
+.dark {
+  --background: linear-gradient(135deg, #0a0e27 0%, #1a1a4d 50%, #2d1b4d 100%);
+  --background-solid: #0a0e27;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #6366f1;
+  --primary-foreground: #0a0e27;
+  --secondary: #06b6d4;
+  --secondary-foreground: #0a0e27;
+  --muted: #334155;
+  --muted-foreground: #cbd5e1;
+  --accent: #a78bfa;
+  --accent-foreground: #0a0e27;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #0a0e27;
+  --border: #475569;
+  --input: #0a0e27;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #06b6d4;
+  --chart-3: #a78bfa;
+  --chart-4: #f472b6;
+  --chart-5: #fbbf24;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #0a0e27;
+  --sidebar-accent: #06b6d4;
+  --sidebar-accent-foreground: #0a0e27;
+  --sidebar-border: #475569;
+  --sidebar-ring: #6366f1;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    background: var(--background);
+    min-height: 100vh;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-effect-dark {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-soft-dark {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Seasonal Background Styles */
+  .season-default {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-indigo-950 dark:to-purple-950;
+  }
+
+  .season-spring {
+    @apply bg-gradient-to-br from-green-50 via-emerald-50 to-blue-50 dark:from-green-950 dark:via-emerald-950 dark:to-blue-950;
+  }
+
+  .season-summer {
+    @apply bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 dark:from-yellow-950 dark:via-orange-950 dark:to-amber-950;
+  }
+
+  .season-autumn {
+    @apply bg-gradient-to-br from-orange-50 via-red-50 to-amber-50 dark:from-orange-950 dark:via-red-950 dark:to-amber-950;
+  }
+
+  .season-winter {
+    @apply bg-gradient-to-br from-blue-50 via-cyan-50 to-slate-50 dark:from-blue-950 dark:via-cyan-950 dark:to-slate-950;
+  }
+
+  /* Header Section Styling */
+  .header-section {
+    @apply relative z-20 backdrop-blur-sm bg-white/40 dark:bg-slate-900/40;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .season-spring .header-section {
+    @apply bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-blue-500/10 dark:from-green-600/20 dark:via-emerald-600/20 dark:to-blue-600/20;
+  }
+
+  .season-summer .header-section {
+    @apply bg-gradient-to-r from-yellow-500/10 via-orange-500/10 to-amber-500/10 dark:from-yellow-600/20 dark:via-orange-600/20 dark:to-amber-600/20;
+  }
+
+  .season-autumn .header-section {
+    @apply bg-gradient-to-r from-orange-500/10 via-red-500/10 to-amber-500/10 dark:from-orange-600/20 dark:via-red-600/20 dark:to-amber-600/20;
+  }
+
+  .season-winter .header-section {
+    @apply bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-slate-500/10 dark:from-blue-600/20 dark:via-cyan-600/20 dark:to-slate-600/20;
+  }
+
+  /* Body Section Styling */
+  .body-section {
+    @apply relative z-10 min-h-[calc(100vh-150px)];
+  }
+}

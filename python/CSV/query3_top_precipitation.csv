@@ -1,0 +1,11 @@
+id,Temperature,Humidity,Wind_Speed,Precipitation(%),Cloud_Cover,Atmospheric_Pressure,UV_Index,Season,Visibility(km),Location,Weather_Type,Humidity_Normalized
+391,18,94,2.5,109,partly cloudy,1018.62,11,Summer,6.0,coastal,Cloudy,0.8314606741573034
+38,2,105,19.0,109,overcast,991.68,7,Winter,3.5,mountain,Snowy,0.9550561797752808
+443,59,106,8.5,109,clear,1023.39,13,Winter,9.0,mountain,Sunny,0.9662921348314608
+293,2,105,10.5,109,overcast,990.79,0,Winter,3.0,mountain,Snowy,0.9550561797752808
+828,2,93,1.5,109,overcast,980.1,2,Winter,5.0,inland,Snowy,0.8202247191011236
+697,28,104,21.0,109,partly cloudy,1008.63,0,Spring,3.0,coastal,Rainy,0.9438202247191012
+263,44,94,9.0,109,clear,1024.46,2,Spring,6.5,coastal,Sunny,0.8314606741573034
+602,47,72,11.5,108,clear,1019.44,12,Autumn,9.5,inland,Sunny,0.5842696629213483
+907,32,104,27.0,107,partly cloudy,1015.36,3,Winter,11.5,mountain,Cloudy,0.9438202247191012
+563,45,95,3.0,107,overcast,1013.55,1,Spring,8.0,coastal,Cloudy,0.8426966292134831
